@@ -117,7 +117,7 @@ int main(int argc, char** argv) {
                 operand1 *= 16;
                 operand1 += digit;
             }
-            //extrand operand 2 from file
+            //extract operand 2 from file
             for (int i = 2, len = tokens[2].length(); i < len; i++){
                 int digit = 0;
                 if('0' <= tokens[2][i] && tokens[2][i] <= '9'){
@@ -151,7 +151,7 @@ int main(int argc, char** argv) {
 
 int valid(const std::string& str, int* posToEnd){
     //forgive empty lines
-    if(str.lengtth() == 0;){
+    if(str.length() == 0){
         return 0;
     }
 
@@ -186,7 +186,7 @@ int valid(const std::string& str, int* posToEnd){
         //confirm that secoond element is an operand 
         if(invalidHex(words[1])){
             *posToEnd = words[1].length()-1;
-            return posOfWork(full,2);
+            return posOfWord(full,2);
         }
         //confirm that third element is a valid operand
         if(invalidHex(words[2])){
@@ -206,7 +206,7 @@ int posOfWord(const std::string& str, int n){
     bool inWord = false;
     for(pos = 0, len = str.length(); pos < len; ++pos){
         if (!inWord && !std::isspace(str[pos])){
-            startofWordNum++;
+            startOfWordNum++;
             inWord = true;
         }
         else if (inWord && std::isspace(str[pos])){
