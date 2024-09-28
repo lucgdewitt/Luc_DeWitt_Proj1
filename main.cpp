@@ -21,8 +21,8 @@ std::string getOperation(const std::string& str);
 int main(int argc, char** argv) {
     //Check Arguments
     if(argc != 2) {
-        std::cerr << "Usage: ./Luc_DeWitt_Project1 <text_file>\n";
-        std::cerr << "Text_file is a text file containing various assembly instructions. \n";
+        std::cerr << "Usage: ./Luc_DeWitt_proj1 <text_file>\n";
+        std::cerr << "Text_file is a text file containing valid assembly instructions. \n";
         std::cerr << std::endl;
         return 1;
     }
@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
 
     //opening the file and reading
     fin.open(fileName);
-    while(std::getline(fin,buffer)){
+    while(std::getline(fin, buffer)){
         if(buffer.length() != 0){
             lines.push_back(buffer);
         }
@@ -54,7 +54,7 @@ int main(int argc, char** argv) {
         //point out the error if it can be found
         if((errorPos = valid(buffer, &posToEnd)) ){
             if(errorPos < 0){
-                errorPos == 0;
+                errorPos = 0;
             }
             for(char ch : buffer){
                 if(ch ==' '){
