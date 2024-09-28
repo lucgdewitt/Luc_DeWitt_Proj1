@@ -3,7 +3,7 @@
 #include <filesystem>
 #include <fstream>
 #include <vector>
-#include <sstring>
+#include <sstream>
 
 using u32 = uint32_t;
 
@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     //Check Arguments
     if(argc != 2) {
         std::cerr << "Usage: ./Luc_DeWitt_Project1 <text_file>\n";
-        std::cerr << "Text_file is a text file containing valied assembly instructions. \n";
+        std::cerr << "Text_file is a text file containing various assembly instructions. \n";
         std::cerr << std::endl;
         return 1;
     }
@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
         return 2;
     }
 
-    //Vector for storing the insturctions
+    //Vector for storing the instructions
     std::vector<std::string> lines;
 
     //file IO
